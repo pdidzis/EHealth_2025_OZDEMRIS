@@ -7,4 +7,9 @@ public class Doctor {
 	private DoctorType doctorType;
 	private static long counter = 0;
 
+	
+	
+	
+	
+	
 }
