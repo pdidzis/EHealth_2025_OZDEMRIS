@@ -11,7 +11,6 @@ public class Medicine {
 	private String usageInstructions;
 	private String manufacturer;
 	private LocalDate expirytime;
-	
 	private static long counter = 0;
 
 	
@@ -88,14 +87,11 @@ public class Medicine {
 		}
 	}
 	public void setExpiryTime(LocalDate inputExpiryTime) { 
-		if(inputExpiryTime != null && inputExpiryTime.isAfter(LocalDate.now()))
-		{
 			expirytime = inputExpiryTime;		
-		}
 	}
 	
 	//So in this case if no date is added we will aceppt as expired,im not sure if there is some medicines which dont have any expire date 
-	public boolean isExpired() {
+	public Boolean isExpired() {
 		if(expirytime == null || expirytime.isBefore(LocalDate.now())) {
 			return true;
 		}
