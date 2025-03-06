@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-public class Patient {
+public class Patient extends Person {
 	//variables
 	private long pID;
 	private Address address;
@@ -72,13 +72,16 @@ public class Patient {
 	 //no arg const
 	 
 	  public Patient() {
+		    super();
 	        setpID();
 	        setAddress(null);
 	        setPhoneNo("22222222");
 	        setPatientCode("Test patientcode");
 	    }
 	  
-	  public Patient(String inputPatientCode, Address inputAddress, String inputPhoneNo) {
+	  public Patient(String inputName , String inputSurname, String inputPersonCode,
+			  String inputPatientCode, Address inputAddress, String inputPhoneNo) {
+		    super(inputName, inputSurname, inputPersonCode);
 	        setpID();
 	        setPatientCode(inputPatientCode);
 	        setAddress(inputAddress);
@@ -88,6 +91,6 @@ public class Patient {
 	  //toString 
 	  
 	  public String toString() {
-	        return " pID : " + pID + "Patient Code : " + patientCode + "Address : " + address + " Phone No : " + phoneNo; 
+	        return super.toString() + " pID : " + pID + " Patient Code : " + patientCode + " Address : " + address + " Phone No : " + phoneNo + " \n"; 
 	  }
 }

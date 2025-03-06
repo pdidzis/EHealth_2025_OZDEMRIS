@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import model.Address;
+import model.City;
 import model.Disease;
 import model.Doctor;
 import model.DoctorType;
@@ -43,30 +45,35 @@ public class MainService {
 		
 		//patient
 		Patient p3 = new Patient();
-	    Patient p1 = new Patient("PatientCode1", null, "+37112345678");
-	    Patient p2 = new Patient("PatientCode2", null, "+37187654321");
-	    allPatients.addAll(Arrays.asList(p1, p2, p3));
-	   
-	    System.out.println("\n--- Patients ---");
-	    System.out.println(p3);
-	    System.out.println(p1);
-	    System.out.println(p2);
+		Patient p1 = new Patient(); //"PatientCode1", null, "+37112345678"
+	    Patient p2 = new Patient("Steve", "Jobs", "3124123", "2" , new Address(City.Riga, "Briviba Street", 15), "+37187654321");
 	    
-	    // or i can use System.out.println(allPatients);
+	    allPatients.addAll(Arrays.asList(p1, p2, p3));
+	    allPerson.addAll(Arrays.asList(p1, p2, p3));
+	    System.out.println("\n--- Patients ---");
+	    
+	    System.out.println(allPatients); 
+	    //System.out.println(p3);
+	    //System.out.println(p1);
+	    //System.out.println(p2);
+	    
+	   
 	    
 	    //Medicines
 	    Medicine m3 = new Medicine();
 	    Medicine m1 = new Medicine("Aspirin", "500 mg", "Take after meal", "PharmaInc", LocalDate.of(2025, 10, 15));
 	    Medicine m2 = new Medicine("AntibioticX", "250 mg", "Take with water", "HealthCo", null);
 	    
-	    allMedicines.addAll(Arrays.asList(m1, m2));
+	    allMedicines.addAll(Arrays.asList(m1, m2, m3));
 
 	    System.out.println("\n--- Medicines ---");
-	    System.out.println(m3);
-	    System.out.println(m1);
-	    System.out.println(m2);
 	    
-	    // or i can use System.out.println(allMedicines);
+	    System.out.println(allMedicines); 
+	    //System.out.println(m3);
+	    //System.out.println(m1);
+	    //System.out.println(m2);
+	    
+	 
 	    
 	    PatientDiseaseHistory h1 = new PatientDiseaseHistory();
 	    PatientDiseaseHistory h2 = new PatientDiseaseHistory(LocalDate.now(), true, Disease.cancer, doc1, "No notes", 7, new ArrayList<>(Arrays.asList(m2)));
@@ -75,9 +82,9 @@ public class MainService {
 	    allPatientDiseaseHistory.addAll(Arrays.asList(h1, h2));
 	    System.out.println("\n--- PatientDiseaseHistory ---");
 	    
-	    System.out.println(h1);
-	    System.out.println(h2);
-	    // or i can use System.out.println(allPatientDiseaseHistory);
+	    //System.out.println(h1);
+	    //System.out.println(h2);
+	    System.out.println(allPatientDiseaseHistory);
 	    
 	    //Medical Appointment
 	    MedicalAppointment app1 = new MedicalAppointment();

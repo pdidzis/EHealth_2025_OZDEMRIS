@@ -82,7 +82,7 @@ public class Doctor extends Person{
 	//toString
 	
 	public String toString() {
-		return super.toString() + " dID : " + dID + " Certificate Number : " + certificateNumber + "Total Experience : " + experienceInYears +
+		return super.toString() + " dID : " + dID + " Certificate Number : " + certificateNumber + " Total Experience : " + experienceInYears +
 				" DoctorType : " + doctorType + " \n";
 	}
 	

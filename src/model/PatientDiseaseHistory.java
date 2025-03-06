@@ -142,7 +142,7 @@ public class PatientDiseaseHistory {
     public String toString() {
         return "PatientDiseaseHistory => " + "hID = " + hID + ", diseaseStartingDate = " + diseaseStartingDate + ", isPresent = " + 
                isPresent + ", disease = " + disease + ", treatingDoctor = " + treatingDoctor + ", notes = '" + notes + '\'' +
-               ", severity = " + severity + ", prescribedMedicines=" + prescribedMedicines + '}';
+               ", severity = " + severity + ", prescribedMedicines=" + prescribedMedicines + '}' + " \n";
     }
 
 	

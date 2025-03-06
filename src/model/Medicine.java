@@ -135,7 +135,7 @@ public class Medicine {
 	 
 	 public String toString() {
 		 return "Medicine ID : " + mID + " Medicine Name : " + name + " Dosage : " + dosage + " UsageInstructions : " + usageInstructions + 
-				 " Manufacturer : " + manufacturer + " ExpiryTime : " + expirytime + " Medicine is expired : " + isExpired();
+				 " Manufacturer : " + manufacturer + " ExpiryTime : " + expirytime + " Medicine is expired : " + isExpired() + " \n";
 		 
 	 }
 }
