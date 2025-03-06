@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class PatientDiseaseHistory {
 
+	//variables
 	private long hID;
 	private LocalDate diseaseStartingDate;
 	private boolean	isPresent;
@@ -45,7 +46,7 @@ public class PatientDiseaseHistory {
 	//2.setters
 	
 	public void sethID() {
-		hID = counter++;
+		hID = counter++;	
 	}
 	
 	//shortly if its not empty and if its not in the future , use input otherwise use todays date
@@ -64,10 +65,17 @@ public class PatientDiseaseHistory {
 	}
 	
 	public void setDisease(Disease inputDisease) {
-		disease = inputDisease;	
+		if(inputDisease != null) {
+			disease = inputDisease;	
+		}
+		else 
+		{
+			disease = Disease.not_specified;
+		}
+		
 	}
 	
-	public void setTreatingDoctor(Doctor inputTreatingDoctor) {
+	public void setTreatingDoctor(Doctor inputTreatingDoctor) { //i'll update after finishing Doctor class
 		treatingDoctor = inputTreatingDoctor;
 	}
 	
@@ -137,27 +145,6 @@ public class PatientDiseaseHistory {
                ", severity = " + severity + ", prescribedMedicines=" + prescribedMedicines + '}';
     }
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
