@@ -91,6 +91,6 @@ public class Patient extends Person {
 	  //toString 
 	  
 	  public String toString() {
-	        return super.toString() + " pID : " + pID + " Patient Code : " + patientCode + " Address : " + address + " Phone No : " + phoneNo + " \n"; 
+	        return super.toString() + " Patient_ID : " + pID + " Patient Code : " + patientCode + " Address : " + address + " Phone No : " + phoneNo + " \n"; 
 	  }
 }

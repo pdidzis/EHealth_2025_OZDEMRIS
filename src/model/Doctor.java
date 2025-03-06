@@ -86,6 +86,9 @@ public class Doctor extends Person{
 				" DoctorType : " + doctorType + " \n";
 	}
 	
+	
+	//other functions
+	
 		
 
 	

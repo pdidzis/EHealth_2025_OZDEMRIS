@@ -16,6 +16,10 @@ import model.Patient;
 import model.PatientDiseaseHistory;
 import model.Person;
 
+
+
+
+
 public class MainService {
 	
 	private static List<Doctor> allDoctors = new ArrayList<Doctor>();
@@ -101,14 +105,10 @@ public class MainService {
 	    // or i can use System.out.println(allMedicalAppointment);
 	    
 	    
-	    
-	  
-	    
-	}
-	   
 
-	    
+
 		
+	}
 }
 	
 	

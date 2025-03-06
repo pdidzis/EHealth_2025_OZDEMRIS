@@ -62,11 +62,11 @@ public class Person {
 	//toString
 	
 	public String toString() {
-		return "Name : " + name + " Surname : " + surname + " Person Code : " + personCode;
-	}
+		return surname.charAt(0) + "_" + name.charAt(0) + "_" + personCode;
 	 
-	
 	}
+	
+}	
 	
 	
 	
