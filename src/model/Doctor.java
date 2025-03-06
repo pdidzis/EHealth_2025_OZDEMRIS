@@ -1,6 +1,6 @@
 package model;
 
-public class Doctor {
+public class Doctor extends Person{
 	//variables
 	private long dID;
 	private String certificateNumber;
@@ -61,6 +61,7 @@ public class Doctor {
 	//no arg
 	
 	public Doctor() {
+		super();
 		setdID();
 		setCertificateNumber(null);
 		setExperienceInYears(0.0f);
@@ -68,7 +69,9 @@ public class Doctor {
 	}
 	
 	//arg constr
-	public Doctor(String inputCertificateNumber, float inputExperienceInYears, DoctorType inputDoctorType ) {
+	public Doctor(String inputName , String inputSurname, String inputPersonCode, String inputCertificateNumber, float inputExperienceInYears, 
+			DoctorType inputDoctorType ) {
+		super(inputName, inputSurname, inputPersonCode);
 		setdID();
 		setCertificateNumber(inputCertificateNumber);
 		setExperienceInYears(inputExperienceInYears);
@@ -79,8 +82,8 @@ public class Doctor {
 	//toString
 	
 	public String toString() {
-		return "dID : " + dID + " Certificate Number : " + certificateNumber + "Total Experience : " + experienceInYears +
-				" DoctorType : " + doctorType;
+		return super.toString() + " dID : " + dID + " Certificate Number : " + certificateNumber + "Total Experience : " + experienceInYears +
+				" DoctorType : " + doctorType + " \n";
 	}
 	
 		
